@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 
     int rank, mpi_size;
     int ping_pong_count = 0;
-    const int PING_PONG_LIMIT = 100000;
+    const int PING_PONG_LIMIT = 100;
 
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
