@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
         } else {
             // Receiver
             MPI_Recv(&ping_pong_count, 1, MPI_INT, 1 - rank, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            simulate_cpu_work(5);  // simulate computation *after* receive (blocks sender)
+            simulate_cpu_work(10);  // simulate computation *after* receive (blocks sender)
         }
     }
 

@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
         } else {
             // Receiver: overlap computation while receiving
             MPI_Irecv(&ping_pong_count, 1, MPI_INT, 1 - rank, 0, MPI_COMM_WORLD, &request);
-            simulate_cpu_work(5);  // work *during* receive
+            simulate_cpu_work(10);  // work *during* receive
             MPI_Wait(&request, &status);
         }
     }

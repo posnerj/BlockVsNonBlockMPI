@@ -43,8 +43,8 @@ mpirun -np 2 ./out/pingpong_nonblocking_overlap
 
 | Variant      | Delay Location       | Overlap? | Expected Time |
 |--------------|----------------------|----------|---------------|
-| Blocking     | After `MPI_Recv`     | ❌  No    | ~0.5 sec      |
-| Non-blocking | During `MPI_Irecv`   | ✅ Yes    | ~0.25 sec     |
+| Blocking     | After `MPI_Recv`     | ❌  No    | ~1.00 sec     |
+| Non-blocking | During `MPI_Irecv`   | ✅ Yes    | ~0.50 sec     |
 
 In the non-blocking case, the delay overlaps with message transfer.
 
